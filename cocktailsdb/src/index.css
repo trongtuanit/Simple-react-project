@@ -1,0 +1,319 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background-color: rgb(233, 244, 255);
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  transition: 0.3s;
+  box-sizing: border-box;
+}
+
+:root {
+  --text: rgb(110, 110, 110);
+  --shadow: rgb(109, 109, 109);
+  --dark: rgb(51, 51, 51);
+  --light-green: rgb(61, 255, 61);
+  --dark-green: rgb(1, 85, 1);
+  /* --low-green:  */
+  --danger: #82322f;
+  --info: #33b5e5;
+  --rgba-cyan-slight: rgba(0, 188, 212, 0.1);
+  --blue-grey-lighten: #cfd8dc;
+  --primaryLightColor: #d4e6a5;
+  --primaryColor: #476a2e;
+  --mainSpacing: 2px;
+  --primary: #007bff;
+}
+
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: var(--text);
+}
+
+.navbar {
+  padding: 25px 150px;
+  box-shadow: 0px 0px 15px 5px var(--shadow);
+  align-items: center;
+  background-color: white;
+}
+.nav-center,
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.nav-center img {
+  margin: auto 0;
+}
+
+.nav-links li {
+  margin-right: 15px;
+  padding: 0 15px;
+}
+.nav-links li:last-child {
+  margin-right: none;
+}
+
+.search-bar {
+  border-radius: 6px;
+  display: flex;
+  width: 30%;
+  flex-direction: column;
+  margin: 65px auto;
+  padding: 40px;
+  box-shadow: 2.5px 3px 2px 1px var(--dark);
+  background-color: white;
+}
+
+.search-bar__heading {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bolder;
+  color: var(--dark-green);
+  margin-bottom: 15px;
+  letter-spacing: 2.5px;
+}
+.search-bar__input {
+  padding: 8px 12px;
+  font-size: 20px;
+  outline: none;
+  border: 2px solid var(--blue-grey-lighten);
+  box-shadow: 2px 4px 5px 2px white;
+}
+.search-bar__input:focus::selection {
+  background-color: var(--danger);
+  color: white;
+}
+.search-bar__input:focus {
+  border: 2px solid white;
+  box-shadow: 2px 4px 5px 2px var(--blue-grey-lighten);
+}
+.section {
+  width: 100%;
+}
+
+.cocktails-center {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 50px;
+  padding: 0 80px;
+  text-align: center;
+}
+
+.section-title {
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--text);
+  letter-spacing: 1px;
+  margin: 20px auto;
+}
+
+.cocktail {
+  border-radius: 10px;
+  box-shadow: 3px 3px 2px 2px var(--shadow);
+  background-color: white;
+  height: auto;
+  transition: 0.2s;
+}
+.cocktail:hover {
+  box-shadow: 6px 6px 5px 4px var(--blue-grey-lighten);
+}
+
+.img-container {
+  /* width: 30%; */
+  height: 320px;
+  border-radius: 10px;
+}
+
+.img-container img {
+  border-radius: 10px 10px 0 0;
+  height: 100%;
+  width: 100%;
+}
+
+.cocktail-footer {
+  text-align: start;
+  padding: 30px;
+}
+.cocktail-footer h3 {
+  font-size: x-large;
+  margin-bottom: 10px;
+}
+.cocktail-footer h3,
+.cocktail-footer h4 {
+  margin-bottom: 10px;
+}
+.cocktail-footer p {
+  color: var(--shadow);
+}
+
+.btn-details {
+  padding: 0.25rem 0.4rem;
+  text-transform: uppercase;
+  letter-spacing: var(--mainSpacing);
+  color: var(--primaryColor);
+  border: 2px solid var(--primaryColor);
+  padding: 0.45rem 0.8rem;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 0.8rem;
+  background: transparent;
+  margin-top: 10px;
+}
+.btn-details:hover {
+  background: var(--primaryLightColor);
+  border-color: var(--primaryLightColor);
+}
+
+.about {
+  margin: 100px auto;
+  width: 40%;
+  letter-spacing: var(--mainSpacing);
+}
+.about-title {
+  text-align: center;
+}
+.about-description {
+  text-align: justify;
+  font-size: 16px;
+  margin-top: 30px;
+  line-height: 30px;
+}
+
+.error {
+  width: 40%;
+  margin: 100px auto;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.error-message {
+  letter-spacing: var(--mainSpacing);
+}
+
+.back-home-btn {
+  display: inline-block;
+  margin-top: 20px;
+  border-radius: 4px;
+  padding: 7px 12px;
+  background-color: var(--dark-green);
+  color: white;
+}
+
+.back-home-btn:hover {
+  background-color: var(--primaryLightColor);
+  color: var(--dark-green);
+}
+
+.single-cocktail {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin: 40px auto;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  border-radius: 10px;
+}
+.single-cocktail-name {
+  margin: 25px auto;
+}
+
+.single-cocktail-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.single-cocktail .img-container {
+  border-radius: 10px;
+  flex-basis: 34%;
+  height: 410px;
+  border-radius: 3px;
+}
+
+.single-cocktail .img-container img {
+  border-radius: 10px;
+}
+
+.single-cocktail .infomation {
+  text-align: start;
+  flex-basis: 60%;
+}
+
+.single-cocktail .infomation p {
+  line-height: 33px;
+}
+
+.single-cocktail .infomation .drink-data {
+  padding: 2px 10px;
+  border-radius: 3px;
+  margin-top: 20px;
+  display: inline-flex;
+  background-color: var(--primaryLightColor);
+  color: var(--dark-green);
+  text-transform: capitalize;
+}
+
+.single-cocktail .infomation .item {
+  background-color: var(--primary);
+  padding: 3px 5px;
+  border-radius: 2px;
+  color: white;
+  user-select: none;
+}
+
+.page {
+  width: 100%;
+  min-height: 5vh;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #22a6ff;
+  border-right: 16px solid #22a7ffd3;
+  border-left: 16px solid #22a7ff98;
+  border-bottom: 16px solid #22a7ff6b;
+  width: 80px;
+  height: 80px;
+  -webkit-animation: spin 1.25s linear infinite; /* Safari */
+  animation: spin 1.25s linear infinite;
+}
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
